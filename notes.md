@@ -12,3 +12,7 @@ npm i prettier
 whenever we connect with db should use try and catch and async await because our database is on other subcontinent 
 
 when we use middlewares we use app.use() in index.js or main file
+
+moongose-aggregate-paginate-v2
+bcrypt
+jwt
