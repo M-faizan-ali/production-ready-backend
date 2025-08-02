@@ -16,3 +16,8 @@ when we use middlewares we use app.use() in index.js or main file
 moongose-aggregate-paginate-v2
 bcrypt
 jwt
+
+cloudinary
+multer
+
+https://github.com/expressjs/multer/blob/main/README.md multer docs
