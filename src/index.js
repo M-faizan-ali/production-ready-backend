@@ -1,7 +1,12 @@
 import dotenv from "dotenv";
-dotenv.config();
+dotenv.config({
+  path: './.env' 
+});
+
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
+
+
 console.log("env", process.env.MONGO_URI);
 
 connectDB()
@@ -16,3 +21,4 @@ connectDB()
   .finally(() => {
     console.log("Connection promise end");
   });
+ 

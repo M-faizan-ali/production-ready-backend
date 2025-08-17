@@ -1,7 +1,7 @@
-import { ApiError } from "../utils/ApiErrors";
-import { asyncHandler } from "../utils/ayncHandler";
+import { ApiError } from "../utils/ApiErrors.js";
+import { asyncHandler } from "../utils/ayncHandler.js";
 import jwt from "jsonwebtoken";
-import { User } from "../models/user.model";
+import { User } from "../models/user.model.js";
 export const verifyJWT = asyncHandler(async (req, res, next) => {
   // get token from frontend
   // if  token not found throw error
@@ -9,7 +9,7 @@ export const verifyJWT = asyncHandler(async (req, res, next) => {
   // get the user of existing token
   try {
     const token =
-      req.cookie?.accessToken ||
+      req.cookies?.accessToken ||
       req.header("Authorization")?.replace("Bearer ", "");
   
     if (!token) {
